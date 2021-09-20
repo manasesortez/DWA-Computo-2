@@ -1,16 +1,17 @@
-var selectedRow = null
+var selectedRow = null;
+
 function onFormSubmit() {
+    var formData = readFormData();
     if (validate()) {
-        var formData = readFormData();
         if (selectedRow == null)
             insertNewRecord(formData);
         else
             updateRecord(formData);
         resetForm();
     }
-
 }
-    function readFormData() {
+
+function readFormData() {
     var formData = {};
     formData["Nombre"] = document.getElementById("Nombre").value;
     formData["Genero"] = document.getElementById("Genero").value;
@@ -36,8 +37,8 @@ function insertNewRecord(data) {
     cell5.innerHTML = data.Edad;
 
     cell5 = newRow.insertCell(5);
-    cell5.innerHTML = `<a onClick="onEdit(this)">Editar</a>
-                       <a onClick="onDelete(this)">Eliminar</a>`;
+    cell5.innerHTML = `<a style="color:#0000ee;" onClick="onEdit(this)">Editar</a>
+                       <a style="color:#0000ee;"  onClick="onDelete(this)">Eliminar</a>`;
 }
 
 function resetForm() {
