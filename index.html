@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>
-        Html CRUD with Pure JavaScript
-    </title>
+    <title>Html CRUD with Pure JavaScript</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <table>
+    <h3 style="margin-left:40%; color:#fff;">Mis Peliculas Favoritas</h3>
+    <table style="border-style: none;">
         <tr>
             <td>
-                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <form style="border-style: none;" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
                     <div>
-                        <label>Full Name*</label><label class="validation-error hide" id="fullNameValidationError">This field is required.</label>
-                        <input type="text" name="fullName" id="fullName">
+                        <label>Nombre de la Pelicula*</label><label class="validation-error hide" id="NameValidationError">Este es un Campo Requerido.</label>
+                        <input type="text" name="Nombre" id="Nombre">
                     </div>
                     <div>
-                        <label>EMP Code</label>
-                        <input type="text" name="empCode" id="empCode">
+                        <label>Genero</label>
+                        <input type="text" name="Genero" id="Genero">
                     </div>
                     <div>
-                        <label>Salary</label>
-                        <input type="text" name="salary" id="salary">
+                        <label>Director</label>
+                        <input type="text" name="Director" id="Director">
                     </div>
                     <div>
-                        <label>City</label>
-                        <input type="text" name="city" id="city">
+                        <label>Duracion</label>
+                        <input type="text" name="Duracion" id="Duracion">
+                    </div>
+                    <div>
+                        <label>Clasificacion por Edad</label>
+                        <input type="text" name="Edad" id="Edad">
                     </div>
                     <div  class="form-action-buttons">
                         <input type="submit" value="Submit">
@@ -35,13 +36,14 @@
                 </form>
             </td>
             <td>
-                <table class="list" id="employeeList">
+                <table class="list" id="movieList">
                     <thead>
                         <tr>
-                            <th>Full Name</th>
-                            <th>EMP Code</th>
-                            <th>Salary</th>
-                            <th>City</th>
+                            <th>Nombre</th>
+                            <th>Genero</th>
+                            <th>Director</th>
+                            <th>Duracion</th>
+                            <th>Edad</th>
                             <th></th>
                         </tr>
                     </thead>

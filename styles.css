@@ -1,12 +1,26 @@
+body{
+    background-color: #264653;
+}
 body > table{
     width: 80%;
+    margin-left: 100px;
+    background-color:#fff;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-style: none;
+    border: none;
+    border-color: #264653;
 }
 
 table{
     border-collapse: collapse;
+    border-color: #264653;
+
 }
 table.list{
     width:100%;
+    border-color: #264653;
+
 }
 
 td, th {
